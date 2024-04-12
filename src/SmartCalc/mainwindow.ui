@@ -1,0 +1,3403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Calculator</class>
+ <widget class="QMainWindow" name="Calculator">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1520</width>
+    <height>690</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1520</width>
+    <height>690</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1520</width>
+    <height>690</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #D0E17E;</string>
+  </property>
+  <widget class="QWidget" name="main_widget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="all_tabs">
+      <property name="font">
+       <font>
+        <family>DejaVu Sans</family>
+        <pointsize>12</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 2px solid transparent;
+
+QTabWidget::tab{
+	background-color: green;
+}</string>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Rounded</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="calcula_tab">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <attribute name="title">
+        <string>Калькулятор</string>
+       </attribute>
+       <widget class="QGroupBox" name="but_line_box">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>771</width>
+          <height>631</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+        <widget class="QLineEdit" name="line_result">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>721</width>
+           <height>96</height>
+          </rect>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::ClickFocus</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit
+{
+	border:8px solid #00A7A0;
+	color:#002c29;
+	background-color:#FFFFFF;
+	border-radius:25px;
+	
+	text-align:center;
+	font: 700 50pt &quot;Chalkboard&quot;;
+}</string>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="maxLength">
+          <number>255</number>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_graph">
+         <property name="geometry">
+          <rect>
+           <x>480</x>
+           <y>140</y>
+           <width>240</width>
+           <height>60</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>240</width>
+           <height>240</height>
+          </size>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton
+{
+	border:8px solid #00A7A0;
+	border-radius:25px;
+	background-color:#00A7A0;
+	color:#FFFFFF;
+	min-width:50px;
+	min-height:50px;
+
+	text-align:center;
+	font: 700 15pt &quot;Chalkboard&quot;;
+
+	border: 5px solid #00918b;
+ 	border-bottom: 5px solid #00918b;
+ 	border-right: 5px solid #00918b;
+}
+
+QPushButton:hover
+{
+	background-color:#00918b;
+}
+
+QPushButton:pressed
+{
+	background-color:#006661;
+}</string>
+         </property>
+         <property name="text">
+          <string>Create Graph</string>
+         </property>
+        </widget>
+        <widget class="QWidget" name="gridLayoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>210</y>
+           <width>711</width>
+           <height>401</height>
+          </rect>
+         </property>
+         <layout class="QGridLayout" name="buttons_lay">
+          <item row="0" column="3">
+           <widget class="QPushButton" name="pushButton_7">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Chalkboard</family>
+              <pointsize>30</pointsize>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton
+{
+	border:none;
+	border-radius:25px;
+	background-color:#00A7A0;
+	color:#FFFFFF;
+	min-width:50px;
+	min-height:50px;
+
+
+	text-align:center;
+	font: 700 30pt &quot;Chalkboard&quot;;
+
+	border: 5px solid #00918b;
+ 	border-bottom: 5px solid #00918b;
+ 	border-right: 5px solid #00918b;
+}
+
+QPushButton:hover
+{
+	background-color:#00918b;
+}
+
+QPushButton:pressed
+{
+	background-color:#006661;
+}</string>
+            </property>
+            <property name="text">
+             <string>7</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="4">
+           <widget class="QPushButton" name="pushButton_5">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Chalkboard</family>
+              <pointsize>30</pointsize>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton
+{
+	border:none;
+	border-radius:25px;
+	background-color:#00A7A0;
+	color:#FFFFFF;
+	min-width:50px;
+	min-height:50px;
+
+
+	text-align:center;
+	font: 700 30pt &quot;Chalkboard&quot;;
+
+border: 5px solid #00918b;
+ 	border-bottom: 5px solid #00918b;
+ 	border-right: 5px solid #00918b;
+}
+
+QPushButton:hover
+{
+	background-color:#00918b;
+}
+
+QPushButton:pressed
+{
+	background-color:#006661;
+}</string>
+            </property>
+            <property name="text">
+             <string>5</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QPushButton" name="pushButton_closebracket">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton
+{
+	border-radius:25px;
+	background-color:#72c2ff;
+	color:#FFFFFF;
+	min-width:50px;
+	min-height:50px;
+
+	border: 5px solid #62a8de;
+ 	border-bottom: 5px solid #62a8de;
+ 	border-right: 5px solid #62a8de;
+
+	padding:0;
+	text-align:center;
+	font: 700 30pt &quot;Chalkboard&quot;;
+
+	
+}
+
+QPushButton:hover
+{
+	background-color:#53b5ff
+}
+
+QPushButton:pressed
+{
+	background-color:#008cf6
+}</string>
+            </property>
+            <property name="text">
+             <string>)</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="5">
+           <widget class="QPushButton" name="pushButton_x">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Chalkboard</family>
+              <pointsize>30</pointsize>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton
+{
+	border:none;
+	border-radius:25px;
+	background-color:#00A7A0;
+	color:#FFFFFF;
+	min-width:50px;
+	min-height:50px;
+
+
+	text-align:center;
+	font: 700 30pt &quot;Chalkboard&quot;;
+
+border: 5px solid #00918b;
+ 	border-bottom: 5px solid #00918b;
+ 	border-right: 5px solid #00918b;
+}
+
+QPushButton:hover
+{
+	background-color:#00918b;
+}
+
+QPushButton:pressed
+{
+	background-color:#006661;
+}</string>
+            </property>
+            <property name="text">
+             <string>x</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QPushButton" name="pushButton_sin">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Chalkboard</family>
+              <pointsize>20</pointsize>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton
+{
+	border:none;
+	border-radius:25px;
+	background-color:#ff727b;
+	color:#FFFFFF;
+	min-width:50px;
+	min-height:50px;
+
+
+	text-align:center;
+	font: 700 20pt &quot;Chalkboard&quot;;
+
+	border: 5px solid #de626a;
+ 	border-bottom: 5px solid #de626a;
+ 	border-right: 5px solid #de626a;
+}
+
+QPushButton:hover
+{
+	background-color:#de626a;
+}
+
+QPushButton:pressed
+{
+	background-color:#9e444a;
+}</string>
+            </property>
+            <property name="text">
+             <string>cos</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QPushButton" name="pushButton_openbracket">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Chalkboard</family>
+              <pointsize>30</pointsize>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton
+{
+	border-radius:25px;
+	background-color:#72c2ff;
+
+	border: 5px solid #62a8de;
+ 	border-bottom: 5px solid #62a8de;
+ 	border-right: 5px solid #62a8de;
+
+	color:#FFFFFF;
+	min-width:50px;
+	min-height:50px;
+
+	padding:0;
+	text-align:center;
+	font: 700 30pt &quot;Chalkboard&quot;;
+
+	
+}
+
+QPushButton:hover
+{
+	background-color:#53b5ff
+}
+
+QPushButton:pressed
+{
+	background-color:#008cf6
+}</string>
+            </property>
+            <property name="text">
+             <string>(</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="4">
+           <widget class="QPushButton" name="pushButton_dot">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Chalkboard</family>
+              <pointsize>30</pointsize>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton
+{
+	border:none;
+	border-radius:25px;
+	background-color:#00A7A0;
+	color:#FFFFFF;
+	min-width:50px;
+	min-height:50px;
+
+
+	text-align:center;
+	font: 700 30pt &quot;Chalkboard&quot;;
+
+border: 5px solid #00918b;
+ 	border-bottom: 5px solid #00918b;
+ 	border-right: 5px solid #00918b;
+}
+
+QPushButton:hover
+{
+	background-color:#00918b;
+}
+
+QPushButton:pressed
+{
+	background-color:#006661;
+}</string>
+            </property>
+            <property name="text">
+             <string>.</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="6">
+           <widget class="QPushButton" name="pushButton_multiply">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Chalkboard</family>
+              <pointsize>30</pointsize>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton
+{
+	border:none;
+	border-radius:25px;
+	background-color:#5ba700;
+	color:#FFFFFF;
+	min-width:50px;
+	min-height:50px;
+
+	text-align:center;
+	font: 700 30pt &quot;Chalkboard&quot;;
+
+border: 5px solid #4e9100;
+ 	border-bottom: 5px solid #4e9100;
+ 	border-right: 5px solid #4e9100;
+}
+
+QPushButton:hover
+{
+	background-color:#4e9100;
+}
+
+QPushButton:pressed
+{
+	background-color:#356600;
+}</string>
+            </property>
+            <property name="text">
+             <string>*</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="7">
+           <widget class="QPushButton" name="pushButton_allclean">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Chalkboard</family>
+              <pointsize>25</pointsize>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton
+{
+
+	border-radius:25px;
+	background-color:#ff333d;
+	color:#FFFFFF;
+	min-width:50px;
+	min-height:50px;
+
+
+	text-align:center;
+	font: 700 25pt &quot;Chalkboard&quot;;
+
+border: 5px solid #de2b34;
+ 	border-bottom: 5px solid #de2b34;
+ 	border-right: 5px solid #de2b34;
+}
+
+QPushButton:hover
+{
+	background-color:#de2b34;
+}
+
+QPushButton:pressed
+{
+	background-color:#9e1c22;
+}</string>
+            </property>
+            <property name="text">
+             <string>AC</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="4">
+           <widget class="QPushButton" name="pushButton_8">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Chalkboard</family>
+              <pointsize>30</pointsize>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton
+{
+	border:none;
+	border-radius:25px;
+	background-color:#00A7A0;
+	color:#FFFFFF;
+	min-width:50px;
+	min-height:50px;
+
+	text-align:center;
+	font: 700 30pt &quot;Chalkboard&quot;;
+
+	border: 5px solid #00918b;
+ 	border-bottom: 5px solid #00918b;
+ 	border-right: 5px solid #00918b;
+}
+
+QPushButton:hover
+{
+	background-color:#00918b;
+}
+
+QPushButton:pressed
+{
+	background-color:#006661;
+}</string>
+            </property>
+            <property name="text">
+             <string>8</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="3">
+           <widget class="QPushButton" name="pushButton_1">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Chalkboard</family>
+              <pointsize>30</pointsize>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton
+{
+	border:none;
+	border-radius:25px;
+	background-color:#00A7A0;
+	color:#FFFFFF;
+	min-width:50px;
+	min-height:50px;
+
+
+	text-align:center;
+	font: 700 30pt &quot;Chalkboard&quot;;
+
+border: 5px solid #00918b;
+ 	border-bottom: 5px solid #00918b;
+ 	border-right: 5px solid #00918b;
+}
+
+QPushButton:hover
+{
+	background-color:#00918b;
+}
+
+QPushButton:pressed
+{
+	background-color:#006661;
+}</string>
+            </property>
+            <property name="text">
+             <string>1</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="6">
+           <widget class="QPushButton" name="pushButton_divide">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Chalkboard</family>
+              <pointsize>30</pointsize>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton
+{
+	border:none;
+	border-radius:25px;
+	background-color:#5ba700;
+	color:#FFFFFF;
+	min-width:50px;
+	min-height:50px;
+
+
+	text-align:center;
+	font: 700 30pt &quot;Chalkboard&quot;;
+
+border: 5px solid #4e9100;
+ 	border-bottom: 5px solid #4e9100;
+ 	border-right: 5px solid #4e9100;
+}
+
+QPushButton:hover
+{
+	background-color:#4e9100;
+}
+
+QPushButton:pressed
+{
+	background-color:#356600;
+}</string>
+            </property>
+            <property name="text">
+             <string>/</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="6">
+           <widget class="QPushButton" name="pushButton_plus">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Chalkboard</family>
+              <pointsize>30</pointsize>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton
+{
+	border:none;
+	border-radius:25px;
+	background-color:#5ba700;
+	color:#FFFFFF;
+	min-width:50px;
+	min-height:50px;
+
+
+	text-align:center;
+	font: 700 30pt &quot;Chalkboard&quot;;
+
+border: 5px solid #4e9100;
+ 	border-bottom: 5px solid #4e9100;
+ 	border-right: 5px solid #4e9100;
+}
+
+QPushButton:hover
+{
+	background-color:#4e9100;
+}
+
+QPushButton:pressed
+{
+	background-color:#356600;
+}</string>
+            </property>
+            <property name="text">
+             <string>+</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="6">
+           <widget class="QPushButton" name="pushButton_equal">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Chalkboard</family>
+              <pointsize>30</pointsize>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton
+{
+
+	border-radius:25px;
+	background-color:#ffb072;
+	color:#FFFFFF;
+	min-width:50px;
+	min-height:50px;
+
+	text-align:center;
+	font: 700 30pt &quot;Chalkboard&quot;;
+
+border: 5px solid #de9962;
+ 	border-bottom: 5px solid #de9962;
+ 	border-right: 5px solid #de9962;
+}
+
+QPushButton:hover
+{
+	background-color:#de9962;
+}
+
+QPushButton:pressed
+{
+	background-color:#9e6c44;
+}</string>
+            </property>
+            <property name="text">
+             <string>=</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <widget class="QPushButton" name="pushButton_atan">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Chalkboard</family>
+              <pointsize>20</pointsize>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton
+{
+	border:none;
+	border-radius:25px;
+	background-color:#ff727b;
+	color:#FFFFFF;
+	min-width:50px;
+	min-height:50px;
+
+
+	text-align:center;
+	font: 700 20pt &quot;Chalkboard&quot;;
+
+	border: 5px solid #de626a;
+ 	border-bottom: 5px solid #de626a;
+ 	border-right: 5px solid #de626a;
+}
+
+QPushButton:hover
+{
+	background-color:#de626a;
+}
+
+QPushButton:pressed
+{
+	background-color:#9e444a;
+}</string>
+            </property>
+            <property name="text">
+             <string>atan</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="4">
+           <widget class="QPushButton" name="pushButton_2">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Chalkboard</family>
+              <pointsize>30</pointsize>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton
+{
+	border:none;
+	border-radius:25px;
+	background-color:#00A7A0;
+	color:#FFFFFF;
+	min-width:50px;
+	min-height:50px;
+
+
+	text-align:center;
+	font: 700 30pt &quot;Chalkboard&quot;;
+
+border: 5px solid #00918b;
+ 	border-bottom: 5px solid #00918b;
+ 	border-right: 5px solid #00918b;
+}
+
+QPushButton:hover
+{
+	background-color:#00918b;
+}
+
+QPushButton:pressed
+{
+	background-color:#006661;
+}</string>
+            </property>
+            <property name="text">
+             <string>2</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="7">
+           <widget class="QPushButton" name="pushButton_clean">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Chalkboard</family>
+              <pointsize>30</pointsize>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton
+{
+	border-radius:25px;
+	background-color:#ffb0b4;
+	color:#FFFFFF;
+	min-width:50px;
+	min-height:50px;
+
+	text-align:center;
+	font: 700 30pt &quot;Chalkboard&quot;;
+
+border: 5px solid #de999c;
+ 	border-bottom: 5px solid #de999c;
+ 	border-right: 5px solid #de999c;
+}
+
+QPushButton:hover
+{
+	background-color:#de999c;
+}
+
+QPushButton:pressed
+{
+	background-color:#805658;
+}</string>
+            </property>
+            <property name="text">
+             <string>C</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QPushButton" name="pushButton_mod">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Chalkboard</family>
+              <pointsize>20</pointsize>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton
+{
+	border-radius:25px;
+	background-color:#ff727b;
+	color:#FFFFFF;
+	min-width:50px;
+	min-height:50px;
+
+
+	text-align:center;
+	font: 700 20pt &quot;Chalkboard&quot;;
+
+	border: 5px solid #de626a;
+ 	border-bottom: 5px solid #de626a;
+ 	border-right: 5px solid #de626a;
+}
+
+QPushButton:hover
+{
+	background-color:#de626a;
+}
+
+QPushButton:pressed
+{
+	background-color:#9e444a;
+}</string>
+            </property>
+            <property name="text">
+             <string>mod</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="5">
+           <widget class="QPushButton" name="pushButton_9">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Chalkboard</family>
+              <pointsize>30</pointsize>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton
+{
+	border:none;
+	border-radius:25px;
+	background-color:#00A7A0;
+	color:#FFFFFF;
+	min-width:50px;
+	min-height:50px;
+
+
+	text-align:center;
+	font: 700 30pt &quot;Chalkboard&quot;;
+
+	border: 5px solid #00918b;
+ 	border-bottom: 5px solid #00918b;
+ 	border-right: 5px solid #00918b;
+}
+
+QPushButton:hover
+{
+	background-color:#00918b;
+}
+
+QPushButton:pressed
+{
+	background-color:#006661;
+}</string>
+            </property>
+            <property name="text">
+             <string>9</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QPushButton" name="pushButton_acos">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Chalkboard</family>
+              <pointsize>20</pointsize>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton
+{
+	border:none;
+	border-radius:25px;
+	background-color:#ff727b;
+	color:#FFFFFF;
+	min-width:50px;
+	min-height:50px;
+
+
+	text-align:center;
+	font: 700 20pt &quot;Chalkboard&quot;;
+
+	border: 5px solid #de626a;
+ 	border-bottom: 5px solid #de626a;
+ 	border-right: 5px solid #de626a;
+}
+
+QPushButton:hover
+{
+	background-color:#de626a;
+}
+
+QPushButton:pressed
+{
+	background-color:#9e444a;
+}</string>
+            </property>
+            <property name="text">
+             <string>asin</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QPushButton" name="pushButton_log">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Chalkboard</family>
+              <pointsize>20</pointsize>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton
+{
+	border:none;
+	border-radius:25px;
+	background-color:#ff727b;
+	color:#FFFFFF;
+	min-width:50px;
+	min-height:50px;
+
+	text-align:center;
+	font: 700 20pt &quot;Chalkboard&quot;;
+
+	border: 5px solid #de626a;
+ 	border-bottom: 5px solid #de626a;
+ 	border-right: 5px solid #de626a;
+
+}
+
+QPushButton:hover
+{
+	background-color:#de626a;
+}
+
+QPushButton:pressed
+{
+	background-color:#9e444a;
+}</string>
+            </property>
+            <property name="text">
+             <string>log</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="5">
+           <widget class="QPushButton" name="pushButton_6">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Chalkboard</family>
+              <pointsize>30</pointsize>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton
+
+{
+	border:none;
+	border-radius:25px;
+	background-color:#00A7A0;
+	color:#FFFFFF;
+	min-width:50px;
+	min-height:50px;
+
+
+	text-align:center;
+
+
+
+	font: 700 30pt &quot;Chalkboard&quot;;
+
+border: 5px solid #00918b;
+ 	border-bottom: 5px solid #00918b;
+ 	border-right: 5px solid #00918b;
+}
+
+QPushButton:hover
+{
+	background-color:#00918b;
+}
+
+QPushButton:pressed
+{
+	background-color:#006661;
+}</string>
+            </property>
+            <property name="text">
+             <string>6</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="7">
+           <widget class="QPushButton" name="pushButton_degree">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Chalkboard</family>
+              <pointsize>30</pointsize>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton
+{
+	border:none;
+	border-radius:25px;
+	background-color:#5ba700;
+	color:#FFFFFF;
+	min-width:50px;
+	min-height:50px;
+
+
+	text-align:center;
+	font: 700 30pt &quot;Chalkboard&quot;;
+
+border: 5px solid #4e9100;
+ 	border-bottom: 5px solid #4e9100;
+ 	border-right: 5px solid #4e9100;
+}
+
+QPushButton:hover
+{
+	background-color:#4e9100;
+}
+
+QPushButton:pressed
+{
+	background-color:#356600;
+}</string>
+            </property>
+            <property name="text">
+             <string>^</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QPushButton" name="pushButton_ln">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Chalkboard</family>
+              <pointsize>20</pointsize>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton
+{
+	border:none;
+	border-radius:25px;
+	background-color:#ff727b;
+	color:#FFFFFF;
+	min-width:50px;
+	min-height:50px;
+
+
+	text-align:center;
+	font: 700 20pt &quot;Chalkboard&quot;;
+
+	border: 5px solid #de626a;
+ 	border-bottom: 5px solid #de626a;
+ 	border-right: 5px solid #de626a;
+}
+
+QPushButton:hover
+{
+	background-color:#de626a;
+}
+
+QPushButton:pressed
+{
+	background-color:#9e444a;
+}</string>
+            </property>
+            <property name="text">
+             <string>ln</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QPushButton" name="pushButton_cos">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Chalkboard</family>
+              <pointsize>20</pointsize>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton
+{
+	border:none;
+	border-radius:25px;
+	background-color:#ff727b;
+	color:#FFFFFF;
+	min-width:50px;
+	min-height:50px;
+
+
+	text-align:center;
+	font: 700 20pt &quot;Chalkboard&quot;;
+
+	border: 5px solid #de626a;
+ 	border-bottom: 5px solid #de626a;
+ 	border-right: 5px solid #de626a;
+}
+
+QPushButton:hover
+{
+	background-color:#de626a;
+}
+
+QPushButton:pressed
+{
+	background-color:#9e444a;
+}</string>
+            </property>
+            <property name="text">
+             <string>sin</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="7">
+           <widget class="QPushButton" name="pushButton_minus">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Chalkboard</family>
+              <pointsize>30</pointsize>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton
+{
+	border:none;
+	border-radius:25px;
+	background-color:#5ba700;
+	color:#FFFFFF;
+	min-width:50px;
+	min-height:50px;
+
+	text-align:center;
+	font: 700 30pt &quot;Chalkboard&quot;;
+
+border: 5px solid #4e9100;
+ 	border-bottom: 5px solid #4e9100;
+ 	border-right: 5px solid #4e9100;
+}
+
+QPushButton:hover
+{
+	background-color:#4e9100;
+}
+
+QPushButton:pressed
+{
+	background-color:#356600;
+}</string>
+            </property>
+            <property name="text">
+             <string>-</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QPushButton" name="pushButton_4">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Chalkboard</family>
+              <pointsize>30</pointsize>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton
+{
+	border:none;
+	border-radius:25px;
+	background-color:#00A7A0;
+	color:#FFFFFF;
+	min-width:50px;
+	min-height:50px;
+
+
+	text-align:center;
+	font: 700 30pt &quot;Chalkboard&quot;;
+
+border: 5px solid #00918b;
+ 	border-bottom: 5px solid #00918b;
+ 	border-right: 5px solid #00918b;
+}
+
+QPushButton:hover
+{
+	background-color:#00918b;
+}
+
+QPushButton:pressed
+{
+	background-color:#006661;
+}</string>
+            </property>
+            <property name="text">
+             <string>4</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QPushButton" name="pushButton_asin">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Chalkboard</family>
+              <pointsize>20</pointsize>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton
+{
+	border:none;
+	border-radius:25px;
+	background-color:#ff727b;
+	color:#FFFFFF;
+	min-width:50px;
+	min-height:50px;
+
+
+	text-align:center;
+	font: 700 20pt &quot;Chalkboard&quot;;
+
+	border: 5px solid #de626a;
+ 	border-bottom: 5px solid #de626a;
+ 	border-right: 5px solid #de626a;
+}
+
+QPushButton:hover
+{
+	background-color:#de626a;
+}
+
+QPushButton:pressed
+{
+	background-color:#9e444a;
+}</string>
+            </property>
+            <property name="text">
+             <string>acos</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QPushButton" name="pushButton_sqrt">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Chalkboard</family>
+              <pointsize>20</pointsize>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton
+{
+	border:none;
+	border-radius:25px;
+	background-color:#ff727b;
+	color:#FFFFFF;
+	min-width:50px;
+	min-height:50px;
+
+
+	text-align:center;
+	font: 700 20pt &quot;Chalkboard&quot;;
+
+	border: 5px solid #de626a;
+ 	border-bottom: 5px solid #de626a;
+ 	border-right: 5px solid #de626a;
+}
+
+QPushButton:hover
+{
+	background-color:#de626a;
+}
+
+QPushButton:pressed
+{
+	background-color:#9e444a;
+}</string>
+            </property>
+            <property name="text">
+             <string>sqrt</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="5">
+           <widget class="QPushButton" name="pushButton_3">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Chalkboard</family>
+              <pointsize>30</pointsize>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton
+{
+	border:none;
+	border-radius:25px;
+	background-color:#00A7A0;
+	color:#FFFFFF;
+	min-width:50px;
+	min-height:50px;
+
+
+	text-align:center;
+	font: 700 30pt &quot;Chalkboard&quot;;
+
+border: 5px solid #00918b;
+ 	border-bottom: 5px solid #00918b;
+ 	border-right: 5px solid #00918b;
+}
+
+QPushButton:hover
+{
+	background-color:#00918b;
+}
+
+QPushButton:pressed
+{
+	background-color:#006661;
+}</string>
+            </property>
+            <property name="text">
+             <string>3</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="3">
+           <widget class="QPushButton" name="pushButton_0">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Chalkboard</family>
+              <pointsize>30</pointsize>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton
+{
+	border:none;
+	border-radius:25px;
+	background-color:#00A7A0;
+	color:#FFFFFF;
+	min-width:50px;
+	min-height:50px;
+
+
+	text-align:center;
+	font: 700 30pt &quot;Chalkboard&quot;;
+
+border: 5px solid #00918b;
+ 	border-bottom: 5px solid #00918b;
+ 	border-right: 5px solid #00918b;
+}
+
+QPushButton:hover
+{
+	background-color:#00918b;
+}
+
+QPushButton:pressed
+{
+	background-color:#006661;
+}</string>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="2">
+           <widget class="QPushButton" name="pushButton_tan">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Chalkboard</family>
+              <pointsize>20</pointsize>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton
+{
+	border:none;
+	border-radius:25px;
+	background-color:#ff727b;
+	color:#FFFFFF;
+	min-width:50px;
+	min-height:50px;
+
+	text-align:center;
+	font: 700 20pt &quot;Chalkboard&quot;;
+
+	border: 5px solid #de626a;
+ 	border-bottom: 5px solid #de626a;
+ 	border-right: 5px solid #de626a;
+}
+
+QPushButton:hover
+{
+	background-color:#de626a;
+}
+
+QPushButton:pressed
+{
+	background-color:#9e444a;
+}</string>
+            </property>
+            <property name="text">
+             <string>tan</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QLineEdit" name="line_x">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>140</y>
+           <width>311</width>
+           <height>60</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::ClickFocus</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit
+{
+	border:5px solid #00A7A0;
+	color:#002c29;
+	background-color:#FFFFFF;
+	border-radius:10px;
+	
+	text-align:center;
+	font: 700 30pt &quot;Chalkboard&quot;;
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="maxLength">
+          <number>255</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="icon_x">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>130</y>
+           <width>71</width>
+           <height>69</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+	color:#002c29;
+
+
+	
+	text-align:center;
+	font: 700 25pt &quot;Chalkboard&quot;;</string>
+         </property>
+         <property name="text">
+          <string>x =</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="graph_val_box">
+        <property name="geometry">
+         <rect>
+          <x>780</x>
+          <y>0</y>
+          <width>711</width>
+          <height>631</height>
+         </rect>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::StrongFocus</enum>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+        <widget class="QCustomPlot" name="graph_window" native="true">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>30</y>
+           <width>651</width>
+           <height>461</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>510</y>
+           <width>671</width>
+           <height>128</height>
+          </rect>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
+         <layout class="QGridLayout" name="values_lay">
+          <item row="1" column="3">
+           <widget class="QLabel" name="label_ymax">
+            <property name="styleSheet">
+             <string notr="true">QLabel{
+	color:#002c29;
+	text-align:center;
+	font: 700 20pt &quot;Chalkboard&quot;;
+}
+</string>
+            </property>
+            <property name="text">
+             <string>Ymax =</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QLabel" name="label_xmax">
+            <property name="styleSheet">
+             <string notr="true">
+	color:#002c29;
+
+
+	
+	text-align:center;
+	font: 700 20pt &quot;Chalkboard&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Xmax =</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="ymin_line">
+            <property name="focusPolicy">
+             <enum>Qt::StrongFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit
+{
+	border:5px solid #00A7A0;
+	color:#002c29;
+	background-color:#FFFFFF;
+	border-radius:10px;
+	
+	text-align:center;
+	font: 700 20pt &quot;Chalkboard&quot;;
+}</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="maxLength">
+             <number>255</number>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="4">
+           <widget class="QLineEdit" name="ymax_line">
+            <property name="focusPolicy">
+             <enum>Qt::StrongFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit
+{
+	border:5px solid #00A7A0;
+	color:#002c29;
+	background-color:#FFFFFF;
+	border-radius:10px;
+	
+	text-align:center;
+	font: 700 20pt &quot;Chalkboard&quot;;
+}</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="maxLength">
+             <number>255</number>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="xmin_line">
+            <property name="focusPolicy">
+             <enum>Qt::StrongFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit
+{
+	border:5px solid #00A7A0;
+	color:#002c29;
+	background-color:#FFFFFF;
+	border-radius:10px;
+	
+	text-align:center;
+	font: 700 20pt &quot;Chalkboard&quot;;
+}</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="maxLength">
+             <number>255</number>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_xmin">
+            <property name="styleSheet">
+             <string notr="true">
+	color:#002c29;
+
+
+	
+	text-align:center;
+	font: 700 20pt &quot;Chalkboard&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Xmin =</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_ymin">
+            <property name="styleSheet">
+             <string notr="true">
+	color:#002c29;
+
+
+	
+	text-align:center;
+	font: 700 20pt &quot;Chalkboard&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Ymin =</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="4">
+           <widget class="QLineEdit" name="xmax_line">
+            <property name="focusPolicy">
+             <enum>Qt::StrongFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit
+{
+	border:5px solid #00A7A0;
+	color:#002c29;
+	background-color:#FFFFFF;
+	border-radius:10px;
+	
+	text-align:center;
+	font: 700 20pt &quot;Chalkboard&quot;;
+}</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="maxLength">
+             <number>255</number>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <spacer name="calc_spac">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="credit_calc_tab">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <attribute name="title">
+        <string>Кредитный калькулятор</string>
+       </attribute>
+       <widget class="QGroupBox" name="credit_box">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>20</y>
+          <width>1481</width>
+          <height>601</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <widget class="QGroupBox" name="type_credit_lay">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>180</y>
+           <width>501</width>
+           <height>93</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string/>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_5">
+          <item row="0" column="0" colspan="2">
+           <widget class="QLabel" name="icon_credit_type">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Chalkboard</family>
+              <pointsize>20</pointsize>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">
+	color:#002c29;
+
+
+	
+	text-align:center;
+	font: 700 20pt &quot;Chalkboard&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Тип кредита:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QRadioButton" name="annuit">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>200</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">
+	color:#002c29;
+
+
+	
+	text-align:center;
+	font: 700 15pt &quot;Chalkboard&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Аннуитетный</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QRadioButton" name="differenc">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>300</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">
+	color:#002c29;
+
+
+	
+	text-align:center;
+	font: 700 15pt &quot;Chalkboard&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Дифференцированный</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QGroupBox" name="cred_output_box">
+         <property name="geometry">
+          <rect>
+           <x>-20</x>
+           <y>410</y>
+           <width>791</width>
+           <height>201</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string/>
+         </property>
+         <widget class="QWidget" name="layoutWidget1">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>20</y>
+            <width>728</width>
+            <height>157</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="cred_output_lay">
+           <item row="0" column="0">
+            <widget class="QLabel" name="icon_month_pay">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>420</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">
+	color:#002c29;
+
+
+	
+	text-align:center;
+	font: 700 20pt &quot;Chalkboard&quot;;</string>
+             </property>
+             <property name="text">
+              <string>Ежемесячный платеж (₽)</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="line_month_pay">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>300</width>
+               <height>45</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>300</width>
+               <height>45</height>
+              </size>
+             </property>
+             <property name="focusPolicy">
+              <enum>Qt::ClickFocus</enum>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLineEdit
+{
+	border:5px solid #00A7A0;
+	color:#002c29;
+	background-color:#FFFFFF;
+	border-radius:10px;
+	
+	text-align:center;
+	font: 700 15pt &quot;Chalkboard&quot;;
+}</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="icon_total_overpay">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>420</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Chalkboard</family>
+               <pointsize>20</pointsize>
+               <italic>false</italic>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">
+	color:#002c29;
+
+
+	
+	text-align:center;
+	font: 700 20pt &quot;Chalkboard&quot;;</string>
+             </property>
+             <property name="text">
+              <string>Переплата по кредиту (₽)</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="line_total_overpay">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>300</width>
+               <height>45</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>300</width>
+               <height>45</height>
+              </size>
+             </property>
+             <property name="focusPolicy">
+              <enum>Qt::ClickFocus</enum>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLineEdit
+{
+	border:5px solid #00A7A0;
+	color:#002c29;
+	background-color:#FFFFFF;
+	border-radius:10px;
+	
+	text-align:center;
+	font: 700 15pt &quot;Chalkboard&quot;;
+}</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="icon_total_payments">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>420</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">
+	color:#002c29;
+
+
+	
+	text-align:center;
+	font: 700 20pt &quot;Chalkboard&quot;;</string>
+             </property>
+             <property name="text">
+              <string>Общая выплата (₽)</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="line_total_payments">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>300</width>
+               <height>45</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>300</width>
+               <height>45</height>
+              </size>
+             </property>
+             <property name="focusPolicy">
+              <enum>Qt::ClickFocus</enum>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLineEdit
+{
+	border:5px solid #00A7A0;
+	color:#002c29;
+	background-color:#FFFFFF;
+	border-radius:10px;
+	
+	text-align:center;
+	font: 700 15pt &quot;Chalkboard&quot;;
+}</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+        <widget class="QGroupBox" name="cred_but_box">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>300</y>
+           <width>601</width>
+           <height>100</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string/>
+         </property>
+         <widget class="QPushButton" name="pushButton_credit_calc">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>20</y>
+            <width>300</width>
+            <height>60</height>
+           </rect>
+          </property>
+          <property name="focusPolicy">
+           <enum>Qt::NoFocus</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+	border:8px solid #00A7A0;
+	border-radius:25px;
+	background-color:#00A7A0;
+	color:#FFFFFF;
+	min-width:50px;
+	min-height:50px;
+
+	text-align:center;
+	font: 700 25pt &quot;Chalkboard&quot;;
+
+	border: 5px solid #00918b;
+ 	border-bottom: 5px solid #00918b;
+ 	border-right: 5px solid #00918b;
+}
+
+QPushButton:hover
+{
+	background-color:#00918b;
+}
+
+QPushButton:pressed
+{
+	background-color:#006661;
+}</string>
+          </property>
+          <property name="text">
+           <string>Calculate</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_credit_clear">
+          <property name="geometry">
+           <rect>
+            <x>460</x>
+            <y>20</y>
+            <width>141</width>
+            <height>60</height>
+           </rect>
+          </property>
+          <property name="focusPolicy">
+           <enum>Qt::NoFocus</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+	border:8px solid #00A7A0;
+	border-radius:25px;
+	background-color:#00A7A0;
+	color:#FFFFFF;
+	min-width:50px;
+	min-height:50px;
+
+	text-align:center;
+	font: 700 15pt &quot;Chalkboard&quot;;
+
+	border: 5px solid #00918b;
+ 	border-bottom: 5px solid #00918b;
+ 	border-right: 5px solid #00918b;
+}
+
+QPushButton:hover
+{
+	background-color:#00918b;
+}
+
+QPushButton:pressed
+{
+	background-color:#006661;
+}</string>
+          </property>
+          <property name="text">
+           <string>All Clear</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QGroupBox" name="cred_input_box">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>10</y>
+           <width>747</width>
+           <height>169</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string/>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_3">
+          <item row="3" column="2">
+           <widget class="QLineEdit" name="line_percent">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>300</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>300</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::ClickFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit
+{
+	border:5px solid #00A7A0;
+	color:#002c29;
+	background-color:#FFFFFF;
+	border-radius:10px;
+	
+	text-align:center;
+	font: 700 15pt &quot;Chalkboard&quot;;
+}</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="maxLength">
+             <number>6</number>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="icon_term">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Chalkboard</family>
+              <pointsize>20</pointsize>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">
+	color:#002c29;
+
+
+	
+	text-align:center;
+	font: 700 20pt &quot;Chalkboard&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Срок (мес)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLineEdit" name="line_total_credit">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>300</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>300</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::ClickFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit
+{
+	border:5px solid #00A7A0;
+	color:#002c29;
+	background-color:#FFFFFF;
+	border-radius:10px;
+	
+	text-align:center;
+	font: 700 15pt &quot;Chalkboard&quot;;
+}</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="maxLength">
+             <number>16</number>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="icon_percent">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Chalkboard</family>
+              <pointsize>20</pointsize>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">
+	color:#002c29;
+
+
+	
+	text-align:center;
+	font: 700 20pt &quot;Chalkboard&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Процентная ставка (%)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QLineEdit" name="line_term">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>300</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>300</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::ClickFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit
+{
+	border:5px solid #00A7A0;
+	color:#002c29;
+	background-color:#FFFFFF;
+	border-radius:10px;
+	
+	text-align:center;
+	font: 700 15pt &quot;Chalkboard&quot;;
+}</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="maxLength">
+             <number>3</number>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="icon_total_credit">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Chalkboard</family>
+              <pointsize>20</pointsize>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">
+	color:#002c29;
+	text-align:center;
+	font: 700 20pt &quot;Chalkboard&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Cумма кредита (₽)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <spacer name="cred_spac">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>30</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QTableWidget" name="table_payments">
+         <property name="geometry">
+          <rect>
+           <x>790</x>
+           <y>20</y>
+           <width>671</width>
+           <height>561</height>
+          </rect>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QTableWidget
+{
+
+	border:8px solid #00A7A0;
+	color:#002c29;
+	background-color:#FFFFFF;
+	border-radius:10px;
+	
+	text-align:center;
+	font: 700 15pt &quot;Chalkboard&quot;;
+}
+QHeaderView::section{
+	text-align:center;
+	font: 700 18pt &quot;Chalkboard&quot;;
+	border: 3px solid #00918b;
+	background-color:#00A7A0;
+	color:#FFFFFF;
+	min-width:50px;
+	min-height:50px;
+
+}</string>
+         </property>
+         <property name="sortingEnabled">
+          <bool>false</bool>
+         </property>
+         <property name="rowCount">
+          <number>0</number>
+         </property>
+         <property name="columnCount">
+          <number>3</number>
+         </property>
+         <attribute name="horizontalHeaderCascadingSectionResizes">
+          <bool>true</bool>
+         </attribute>
+         <attribute name="horizontalHeaderMinimumSectionSize">
+          <number>20</number>
+         </attribute>
+         <attribute name="horizontalHeaderDefaultSectionSize">
+          <number>100</number>
+         </attribute>
+         <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="horizontalHeaderStretchLastSection">
+          <bool>true</bool>
+         </attribute>
+         <attribute name="verticalHeaderVisible">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="verticalHeaderMinimumSectionSize">
+          <number>30</number>
+         </attribute>
+         <attribute name="verticalHeaderDefaultSectionSize">
+          <number>30</number>
+         </attribute>
+         <attribute name="verticalHeaderHighlightSections">
+          <bool>false</bool>
+         </attribute>
+         <column>
+          <property name="text">
+           <string>№</string>
+          </property>
+          <property name="font">
+           <font>
+            <family>DejaVu Sans</family>
+            <pointsize>15</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Дата</string>
+          </property>
+          <property name="font">
+           <font>
+            <family>DejaVu Sans</family>
+            <pointsize>15</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Ежемесячный платеж (₽)</string>
+          </property>
+          <property name="font">
+           <font>
+            <family>DejaVu Sans</family>
+            <pointsize>20</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+         </column>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
